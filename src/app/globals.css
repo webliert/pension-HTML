@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-primary: 63 124 124;
+  --c-primary-dark: 44 95 95;
+  --c-secondary: 212 185 150;
+  --c-secondary-soft: 236 222 197;
+  --c-background: 250 247 242;
+  --c-surface: 255 255 255;
+  --c-ink: 42 42 42;
+  --c-ink-soft: 92 92 92;
+  --c-line: 229 223 211;
+  --c-success: 90 140 90;
+  --c-danger: 184 84 80;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-background text-ink font-sans antialiased;
+  font-feature-settings: "tnum";
+}
+
+*:focus-visible {
+  outline: 3px solid rgb(var(--c-primary));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+a { text-underline-offset: 4px; }
+h1, h2, h3, h4 { @apply text-ink font-semibold; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           min-h-btn px-8
+           bg-primary text-white text-lg font-medium
+           rounded-xl shadow-soft
+           hover:bg-primary-dark
+           active:translate-y-px
+           transition-colors duration-200;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           min-h-btn px-8
+           bg-surface text-primary border-2 border-primary text-lg font-medium
+           rounded-xl
+           hover:bg-primary hover:text-white
+           transition-colors duration-200;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2
+           min-h-btn px-6 text-primary text-lg font-medium
+           rounded-xl
+           hover:bg-secondary-soft
+           transition-colors duration-200;
+  }
+  .input-base {
+    @apply w-full min-h-btn px-4
+           bg-surface border-2 border-line rounded-xl
+           text-lg text-ink placeholder:text-ink-soft/60
+           focus:border-primary focus:outline-none
+           transition-colors;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold text-ink;
+  }
+  .section-subtitle {
+    @apply mt-3 text-lg text-ink-soft max-w-2xl;
+  }
+}
+
+.warm-card {
+  background: linear-gradient(180deg, rgb(var(--c-surface)) 0%, rgb(var(--c-secondary-soft) / 0.35) 100%);
+}
