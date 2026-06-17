@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone, ChevronRight } from 'lucide-react'
 import { siteConfig } from '@/lib/site-config'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
@@ -67,13 +67,36 @@ export function Navbar() {
               <X className="w-7 h-7" />
             </button>
           </Container>
-          <nav className="container mx-auto px-5 flex flex-col gap-2 mt-8">
-            {siteConfig.nav.map((item) => (
-              <Link key={item.href} href={item.href} onClick={() => setOpen(false)}
-                className="px-4 py-5 text-2xl text-ink rounded-xl no-underline hover:bg-secondary-soft/40">
-                {item.label}
-              </Link>
-            ))}
+          <nav aria-label="主导航" className="container mx-auto px-5 flex flex-col gap-3 mt-8">
+            {siteConfig.nav.map((item) => {
+              const active = pathname === item.href
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? 'page' : undefined}
+                  className={cn(
+                    'group flex items-center justify-between min-h-touch px-5 py-4 text-xl rounded-2xl no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40',
+                    active
+                      ? 'bg-secondary-soft/70 border border-primary/30 text-primary font-medium shadow-soft'
+                      : 'bg-secondary-soft/20 border border-line text-ink hover:bg-secondary-soft/40'
+                  )}
+                >
+                  <span className="flex items-center gap-3">
+                    {active && <span aria-hidden className="inline-block w-1.5 h-1.5 rounded-full bg-primary" />}
+                    {item.label}
+                  </span>
+                  <ChevronRight
+                    aria-hidden
+                    className={cn(
+                      'w-5 h-5 transition-transform group-hover:translate-x-0.5',
+                      active ? 'text-primary' : 'text-ink-soft'
+                    )}
+                  />
+                </Link>
+              )
+            })}
             <div className="mt-6 flex flex-col gap-4">
               <a href={`tel:${siteConfig.phone}`}
                 className="inline-flex items-center justify-center gap-2 min-h-btn px-6 border-2 border-primary text-primary text-lg font-medium rounded-xl">
