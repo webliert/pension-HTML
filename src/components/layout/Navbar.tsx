@@ -79,8 +79,8 @@ export function Navbar() {
                   className={cn(
                     'group flex items-center justify-between min-h-touch px-5 py-4 text-xl rounded-2xl no-underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40',
                     active
-                      ? 'bg-secondary-soft/70 border border-primary/30 text-primary font-medium shadow-soft'
-                      : 'bg-secondary-soft/20 border border-line text-ink hover:bg-secondary-soft/40'
+                      ? 'bg-surface border border-primary text-primary font-medium shadow-soft'
+                      : 'bg-surface border border-line text-ink hover:bg-secondary-soft/40'
                   )}
                 >
                   <span className="flex items-center gap-3">
