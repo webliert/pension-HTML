@@ -1,0 +1,31 @@
+{
+  "current": {
+    "title": "2026 全年四季度候鸟旅居计划",
+    "subtitle": "颐园·颐乐通",
+    "badge": "限时体验",
+    "image": "/promotions/season-2026.webp",
+    "expires": "2026-12-31",
+    "items": [
+      {
+        "label": "三天两夜深度体验",
+        "price": 118,
+        "unit": "元 / 人",
+        "highlight": false
+      },
+      {
+        "label": "两人成行",
+        "price": 110,
+        "unit": "元 / 人",
+        "highlight": true
+      }
+    ],
+    "summary": "养生养老·自在享老。公司针对南京高知长者，组织 2 天 1 夜参观体验游，限前 100 名参观者，夫妻优先。"
+  },
+  "experience": {
+    "title": "2 天 1 夜参观体验游",
+    "quota": "前 100 名",
+    "price": "118 元 / 人",
+    "highlights": ["夫妻优先", "体验班车", "食宿全包", "深度参观颐园九大业态"],
+    "summary": "公司针对南京高知长者，组织 2 天 1 夜参观体验游，体验班车每月约 12 班次往返，报名活动火热进行中。"
+  }
+}

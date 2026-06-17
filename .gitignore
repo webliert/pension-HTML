@@ -50,3 +50,9 @@ Thumbs.db
 # Supabase local CLI artifacts
 supabase/.branches
 supabase/.temp
+
+# Resource extraction intermediate artifacts (regenerate via scripts/extract_data/ + convert_images.py)
+docs/extract/pptx_imgs/
+docs/extract/webp_converted/
+docs/extract/pptx_raw.json
+docs/extract/pdf_raw.json

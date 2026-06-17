@@ -20,7 +20,7 @@ export function Navbar() {
           <div className="w-12 h-12 rounded-xl bg-primary text-white grid place-items-center text-2xl font-semibold">颐</div>
           <div className="hidden sm:block">
             <div className="text-xl font-semibold text-ink leading-tight">{siteConfig.shortName}</div>
-            <div className="text-sm text-ink-soft leading-tight">养护中心</div>
+            <div className="text-sm text-ink-soft leading-tight">{siteConfig.subtitle.split('·')[1]?.trim() ?? '医养小镇'}</div>
           </div>
         </Link>
 

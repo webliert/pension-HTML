@@ -1,70 +1,85 @@
 import type { Metadata } from 'next'
-import { Heart, Stethoscope, Activity, Utensils, BookOpen, Brain, CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { siteConfig } from '@/lib/site-config'
+import { data } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: '康养服务',
-  description: `颐康养护中心提供日常照护、医疗护理、康复理疗、营养膳食、文娱活动、心理关怀六大服务体系，全方位呵护长者健康。`,
+  description: `茅山颐园康养服务体系：日常生活照护、医疗护理、康复理疗、营养膳食、精神文化生活、心理疏导关怀，全方位呵护长者健康。`,
 }
 
 const detail = [
   {
-    icon: Heart, title: '日常生活照护', color: 'bg-rose-50 text-rose-700',
+    title: '日常生活照护',
+    color: 'bg-rose-50 text-rose-700',
     points: [
-      '24 小时护理员轮班，照护饮食起居、清洁、助浴',
+      '护理员 24 小时轮班，照护饮食起居、清洁、助浴',
       '个性化照护计划，每位长者建立专属健康档案',
       '协助服药、翻身、防跌倒等专项照护',
-      '家属可通过 APP 实时查看每日生活记录',
+      '家属可通过客服实时查看每日生活记录',
     ],
+    image: '/images/service-1.webp',
   },
   {
-    icon: Stethoscope, title: '专业医疗护理', color: 'bg-sky-50 text-sky-700',
+    title: '专业医疗护理',
+    color: 'bg-sky-50 text-sky-700',
     points: [
-      '驻院执业医师 + 护士全天 24 小时值班',
-      '合作三甲医院开通绿色转诊通道',
+      `驻院江南医院（${data.healthcare.hospital.investment}投资）医师 + 护士 24 小时值班`,
+      `${data.healthcare.hospital.medicalInsurance.join(' / ')}`,
       '慢病管理：高血压、糖尿病、冠心病等专项照护',
-      '用药管理：药品统一发放，杜绝漏服错服',
+      '重病就医绿色通道',
     ],
+    image: '/images/service-4.webp',
   },
   {
-    icon: Activity, title: '康复理疗服务', color: 'bg-emerald-50 text-emerald-700',
+    title: '康复理疗服务',
+    color: 'bg-emerald-50 text-emerald-700',
     points: [
-      '康复师一对一评估，个性化康复方案',
-      '物理治疗（PT）+ 作业治疗（OT）+ 言语治疗（ST）',
-      '中医理疗：针灸、推拿、艾灸、拔罐',
-      '智能康复设备：平衡仪、步态训练器等',
+      '健宾楼特设养生堂、足道馆、水疗盐蒸，可预约中医健康理疗',
+      '江南医院体检中心个性化体检服务',
+      '物理治疗 + 中医理疗 + 慢病康复',
+      '桑榆堂护理院长期卧床、晚期姑息治疗、慢性病、阿尔茨海默病照护',
     ],
+    image: '/images/service-3.webp',
   },
   {
-    icon: Utensils, title: '营养膳食定制', color: 'bg-amber-50 text-amber-700',
+    title: '营养膳食定制',
+    color: 'bg-amber-50 text-amber-700',
     points: [
-      '营养师按体质与慢病情况个性化配餐',
-      '每日 5 餐：3 正餐 + 2 加餐，注重软烂适宜',
-      '糖尿病餐、低盐餐、流食/半流食等多种食谱',
-      '严选食材，食材溯源可视化，每周菜单提前公示',
+      '玉膳房 500 餐位，A/B/C 三种营养套餐',
+      '每周更换菜谱，可自选或单点',
+      '结合长者健康、半护理和全护理等不同状况的饮食需求',
+      '兼顾慢性病管控的饮食禁忌',
     ],
+    image: '/images/service-6.webp',
   },
   {
-    icon: BookOpen, title: '精神文化生活', color: 'bg-violet-50 text-violet-700',
+    title: '精神文化生活',
+    color: 'bg-violet-50 text-violet-700',
     points: [
-      '书法、绘画、声乐、手工、太极等 20+ 社团',
-      '每日集体活动：晨操、午间影院、傍晚散步',
-      '节日主题活动、生日会、户外踏青',
-      '家属开放日、亲子互动活动',
+      `卿舸书院 ${data.lifestyle.academy.area}，6 大学娱区块`,
+      '12+ 兴趣空间：茶坊、书画、棋牌、影院、台球、羽毛球、乒乓、手工等',
+      '节日聚会、主题活动、小镇节庆',
+      '「乐·学·为·序」四大主题社群',
     ],
+    image: '/images/service-2.webp',
   },
   {
-    icon: Brain, title: '心理疏导关怀', color: 'bg-indigo-50 text-indigo-700',
+    title: '心理疏导关怀',
+    color: 'bg-indigo-50 text-indigo-700',
     points: [
-      '驻院国家二级心理咨询师',
+      '专业心理咨询师提供情绪支持',
       '新入住长者心理适应期专项陪伴',
       '记忆训练、认知刺激小组活动',
-      '定期家属心理讲座与哀伤辅导',
+      '定期家属心理讲座',
     ],
+    image: '/images/service-5.webp',
   },
-]
+] as const
 
 export default function ServicesPage() {
   return (
@@ -83,7 +98,7 @@ export default function ServicesPage() {
           <Container className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className={`lg:col-span-5 ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
               <div className={`w-16 h-16 rounded-2xl ${d.color} grid place-items-center mb-6`}>
-                <d.icon className="w-8 h-8" aria-hidden />
+                <CheckCircle2 className="w-8 h-8" aria-hidden />
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold">{d.title}</h2>
               <ul className="mt-6 space-y-3">
@@ -96,13 +111,35 @@ export default function ServicesPage() {
               </ul>
             </div>
             <div className={`lg:col-span-7 ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
-              <div className="aspect-[4/3] rounded-2xl bg-secondary-soft shadow-card grid place-items-center">
-                <span className="text-ink-soft/50 text-base">[{d.title} 配图 /images/service-{idx + 1}.jpg]</span>
+              <div className="relative aspect-[4/3] rounded-2xl bg-secondary-soft shadow-card overflow-hidden">
+                <Image src={d.image} alt={d.title} fill sizes="(max-width: 1024px) 100vw, 58vw"
+                  className="object-cover" />
               </div>
             </div>
           </Container>
         </Section>
       ))}
+
+      <Section tone="warm">
+        <Container className="text-center">
+          <h2 className="section-title">套餐参考</h2>
+          <p className="section-subtitle mx-auto">入门参考价，最终以服务协议为准。</p>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {data.pricing.packages.map((p) => (
+              <div key={p.id} className="bg-surface rounded-2xl p-8 border border-line hover:border-primary transition-colors">
+                <h3 className="text-xl font-semibold">{p.name}</h3>
+                <p className="mt-1 text-sm text-ink-soft">{p.tagline}</p>
+                <div className="mt-4 text-3xl font-semibold text-primary">{p.priceText}</div>
+                <p className="mt-4 text-base text-ink-soft leading-relaxed text-left">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <Link href="/contact"
+            className="mt-10 inline-flex items-center gap-2 text-primary text-lg font-medium hover:text-primary-dark no-underline">
+            咨询详细权益 <ArrowRight className="w-5 h-5" />
+          </Link>
+        </Container>
+      </Section>
     </>
   )
 }

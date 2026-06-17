@@ -1,11 +1,12 @@
 import { Container } from '@/components/ui/Container'
+import { data } from '@/lib/data'
 
 const badges = [
-  '民政局五星认证',
-  '医疗机构执业许可',
-  'ISO 9001 质量管理',
-  '食品经营许可',
-  '医保定点机构',
+  `${data.overview.stats.scenicLevel} 茅山景区`,
+  `江南医院 · ${data.overview.stats.hospitalInvestment} 投资`,
+  `卿舸书院 · ${data.overview.stats.academyArea}`,
+  `占地 ${data.overview.stats.siteArea} CCRC`,
+  `森林覆盖 ${data.overview.stats.forestCoverage}`,
 ]
 
 export function TrustStrip() {

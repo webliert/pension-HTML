@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
-import { Phone, MapPin, Mail, Clock } from 'lucide-react'
+import { Phone, MapPin, Mail, Clock, Bus, Car } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { siteConfig } from '@/lib/site-config'
+import { data } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: '联系我们',
@@ -38,7 +39,7 @@ export default function ContactPage() {
             {[
               { icon: Phone, title: '咨询热线', value: siteConfig.phoneDisplay, href: `tel:${siteConfig.phone}` },
               { icon: MapPin, title: '中心地址', value: siteConfig.address },
-              { icon: Mail, title: '邮箱',     value: siteConfig.email, href: `mailto:${siteConfig.email}` },
+              { icon: Mail, title: '邮箱', value: siteConfig.email, href: `mailto:${siteConfig.email}` },
               { icon: Clock, title: '接待时间', value: siteConfig.workingHours },
             ].map((c) => {
               const content = (
@@ -63,13 +64,19 @@ export default function ContactPage() {
               <div>
                 <MapPin className="w-12 h-12 mx-auto text-primary mb-3" aria-hidden />
                 <div>地图区域</div>
-                <div className="mt-2 text-sm">部署后替换为百度/高德地图嵌入代码</div>
+                <div className="mt-2 text-sm">部署后替换为百度 / 高德地图嵌入代码</div>
               </div>
             </div>
-            <p className="mt-4 text-base text-ink-soft">
-              公交：XXX 路 / XXX 路 至「康养中心」站下车即到<br />
-              自驾：导航搜索「{siteConfig.name}」
-            </p>
+            <div className="mt-6 space-y-3 text-base text-ink-soft">
+              {data.location.transit.map((t) => (
+                <p key={t.mode} className="flex gap-2">
+                  {t.mode === '公交' ? <Bus className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden />
+                    : t.mode === '自驾' ? <Car className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden />
+                    : <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" aria-hidden />}
+                  <span><strong className="text-ink">{t.mode}：</strong>{t.detail}</span>
+                </p>
+              ))}
+            </div>
           </Card>
         </Container>
       </Section>

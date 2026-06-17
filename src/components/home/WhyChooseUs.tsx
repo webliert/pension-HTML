@@ -1,12 +1,29 @@
 import { Award, Users, ShieldCheck, HeartHandshake } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
+import { data } from '@/lib/data'
 
 const features = [
-  { icon: Award,        title: '五星权威认证', desc: '民政局最高等级评定，医疗机构执业许可合规专业。' },
-  { icon: Users,        title: '专业护理团队', desc: '医护 + 护理员 + 康复师 + 营养师 + 心理咨询师多学科协作。' },
-  { icon: ShieldCheck,  title: '24h 医护值守', desc: '驻院医生 + 护士全天候值班，与三甲医院开通绿色转诊通道。' },
-  { icon: HeartHandshake,title: '家属透明沟通', desc: '每月家属沟通日、每日长者生活动态推送，远程也能安心。' },
+  {
+    icon: Award,
+    title: `${data.overview.stats.scenicLevel} 茅山景区`,
+    desc: '江苏第一文化名山，道教圣地，森林覆盖率 91.6%，负氧离子 2.8 万 / cm³。',
+  },
+  {
+    icon: Users,
+    title: '江南医院医养保障',
+    desc: `${data.healthcare.hospital.investment}投资，三级综合 JCI 标准，常州 / 金坛医保定点。`,
+  },
+  {
+    icon: ShieldCheck,
+    title: '桑榆堂护理院',
+    desc: '金坛目前唯一护理院，医保定点，嵌入式医养结合机构。',
+  },
+  {
+    icon: HeartHandshake,
+    title: '卿舸书院 2 万㎡',
+    desc: '6 大学娱区块，「乐·学·为·序」四大主题，丰富长者精神文化生活。',
+  },
 ]
 
 export function WhyChooseUs() {
@@ -14,8 +31,8 @@ export function WhyChooseUs() {
     <Section>
       <Container>
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="section-title">为什么家属选择颐康</h2>
-          <p className="section-subtitle mx-auto">把父母交给颐康，是一份踏实的信任。</p>
+          <h2 className="section-title">为什么家属选择茅山颐园</h2>
+          <p className="section-subtitle mx-auto">把父母交给颐园，是一份踏实的信任。</p>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((f) => (

@@ -1,13 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Trees, Sun, Coffee } from 'lucide-react'
+import { ArrowRight, Trees, Sun, Sparkles } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
+import { data } from '@/lib/data'
 
 const highlights = [
-  { icon: Trees, title: '3000㎡ 园林庭院', desc: '四季有景，太极步道、休憩凉亭亲近自然。' },
-  { icon: Sun,   title: '南向采光居室', desc: '所有房间均朝南设计，落地窗引入充足阳光。' },
-  { icon: Coffee,title: '多功能公共区', desc: '阅览室、手工坊、棋牌室、影音厅一应俱全。' },
+  {
+    icon: Trees,
+    title: `${data.overview.stats.scenicLevel} 茅山风景区`,
+    desc: `森林覆盖率 ${data.overview.stats.forestCoverage}，负氧离子 ${data.overview.stats.negativeOxygen}。`,
+  },
+  {
+    icon: Sun,
+    title: `${data.overview.stats.siteArea} CCRC 综合社区`,
+    desc: '南京 1 小时都市圈，长三角顶级园林式医养小镇。',
+  },
+  {
+    icon: Sparkles,
+    title: '苏式园林与徽派建筑',
+    desc: '和谐静美的医养社区，构建现代人对田园健康生活的理想栖居地。',
+  },
 ]
 
 export function EnvironmentPreview() {
@@ -16,16 +29,16 @@ export function EnvironmentPreview() {
       <Container className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div className="lg:col-span-7">
           <div className="relative aspect-[16/10] rounded-2xl overflow-hidden shadow-card bg-secondary-soft">
-            <Image src="/images/facility-main.jpg" alt="颐康养护中心户外园林环境"
+            <Image src="/images/facility-main.webp" alt="茅山颐园健康生活小镇实景"
               fill sizes="(max-width: 1024px) 100vw, 60vw" className="object-cover" />
           </div>
         </div>
 
         <div className="lg:col-span-5">
-          <h2 className="section-title">家在颐康，心归自然</h2>
+          <h2 className="section-title">家在茅山，心归自然</h2>
           <p className="mt-4 text-lg text-ink-soft leading-relaxed">
-            占地 50 亩的花园式养护中心，毗邻城市绿肺，
-            以"居家 + 园林 + 康养"理念打造适宜长者居住的安心之所。
+            毗邻{data.overview.stats.scenicLevel}茅山风景区，以"生态养生，自主享老"理念
+            打造{data.overview.stats.siteArea}高品质医养社区。
           </p>
           <ul className="mt-8 space-y-5">
             {highlights.map((h) => (

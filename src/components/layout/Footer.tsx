@@ -19,7 +19,8 @@ export function Footer() {
               </div>
             </div>
             <p className="text-base text-white/70 leading-relaxed">
-              专业医养结合，{siteConfig.stats.yearsInService} 年专注为长者提供有尊严、有温度的康养服务。
+              {siteConfig.description.split('，')[0]}。由{siteConfig.description.match(/由(.+?)运营/)?.[1] ?? ''}运营，
+              倡导「{siteConfig.description.match(/「(.+?)」/)?.[1] ?? '生态养生，自主享老'}」理念。
             </p>
           </div>
 
@@ -91,7 +92,7 @@ export function Footer() {
           <div>© {new Date().getFullYear()} {siteConfig.name}. 保留所有权利</div>
           <div>
             <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer" className="hover:text-white no-underline">
-              京ICP备XXXXXXXX号-1
+              {siteConfig.icp}
             </a>
           </div>
         </div>

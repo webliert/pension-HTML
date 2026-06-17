@@ -1,0 +1,31 @@
+{
+  "name": "茅山颐园",
+  "nameFull": "茅山颐园·江苏金坛",
+  "subtitle": "中国·长三角顶级园林式医养小镇",
+  "slogan": "养生养老·自在享老",
+  "tagline": "颐园·中国 茅山",
+  "description": "茅山颐园健康生活小镇择址常州市金坛区，位于国家五A级茅山旅游风景度假区内，是南京都市经济圈中集生态环境、文化旅游、人居生活高品位的重点区域。占地1700亩，由江苏默元养老服务管理有限公司运营的大型综合性医养社区，一期开放床位600余张。",
+  "operator": "江苏默元养老服务管理有限公司",
+  "philosophy": "生态养生，自主享老",
+  "values": ["快乐", "自由", "健康", "长寿"],
+  "careModes": ["居家养老", "机构式养老", "社区式养老"],
+  "siteAreaMu": 1700,
+  "siteAreaText": "1700 亩",
+  "phaseOneBeds": 600,
+  "phaseOneBedsText": "600+ 张",
+  "stats": {
+    "siteArea": "1700 亩",
+    "phaseOneBeds": "600+ 张",
+    "scenicLevel": "国家 5A 级",
+    "forestCoverage": "91.6%",
+    "negativeOxygen": "2.8 万 / cm³",
+    "academyArea": "2 万㎡",
+    "hospitalInvestment": "16 亿",
+    "hospitalBeds": "600 张",
+    "hospitalLand": "100+ 亩",
+    "hospitalBuilding": "8.3 万㎡",
+    "streetArea": "9300 ㎡",
+    "streetShops": "40 户",
+    "annualVisitors": "600 万人次"
+  }
+}

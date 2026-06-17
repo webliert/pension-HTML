@@ -4,20 +4,20 @@ import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 
 export const metadata: Metadata = {
-  title: '环境展示',
-  description: '颐康养护中心实景照片：户外园林、居室、公共活动区、餐厅、康复中心等。',
+  title: '实景图集',
+  description: '茅山颐园实景照片：景区资源、康养住宅、活力公寓、医院、护理院、书院、商业水街等。',
 }
 
 const photos = [
-  { src: '/images/gallery-1.jpg', alt: '户外园林步道' },
-  { src: '/images/gallery-2.jpg', alt: '单人间实景' },
-  { src: '/images/gallery-3.jpg', alt: '公共活动厅' },
-  { src: '/images/gallery-4.jpg', alt: '餐厅环境' },
-  { src: '/images/gallery-5.jpg', alt: '康复训练中心' },
-  { src: '/images/gallery-6.jpg', alt: '阅览室' },
-  { src: '/images/gallery-7.jpg', alt: '书法活动' },
-  { src: '/images/gallery-8.jpg', alt: '助浴室' },
-  { src: '/images/gallery-9.jpg', alt: '园艺疗养区' },
+  { src: '/images/gallery-1.webp', alt: '茅山 5A 级风景区资源' },
+  { src: '/images/gallery-2.webp', alt: '长三角交通区位' },
+  { src: '/images/gallery-3.webp', alt: '逸心园康养住宅' },
+  { src: '/images/gallery-4.webp', alt: '健宾楼康养公寓' },
+  { src: '/images/gallery-5.webp', alt: '卿舸书院外观' },
+  { src: '/images/gallery-6.webp', alt: '卿舸书院内景' },
+  { src: '/images/gallery-7.webp', alt: '书院往期活动' },
+  { src: '/images/gallery-8.webp', alt: '茅山商业水街' },
+  { src: '/images/gallery-9.webp', alt: '生活小镇风貌' },
 ]
 
 export default function GalleryPage() {
@@ -25,9 +25,9 @@ export default function GalleryPage() {
     <>
       <Section className="bg-secondary-soft/40 !py-16">
         <Container>
-          <h1 className="text-3xl md:text-4xl font-semibold">环境实景</h1>
+          <h1 className="text-3xl md:text-4xl font-semibold">实景图集</h1>
           <p className="mt-4 text-lg text-ink-soft max-w-2xl leading-relaxed">
-            真实场景，无修饰呈现颐康养护中心的日常。
+            真实场景，无修饰呈现茅山颐园的日常。
           </p>
         </Container>
       </Section>

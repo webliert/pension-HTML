@@ -1,0 +1,92 @@
+[
+  {
+    "id": "yixinyuan",
+    "name": "逸心园康养住宅",
+    "type": "residential",
+    "tagline": "花园洋房·拎包入住",
+    "summary": "默元养老运营的高品质医养社区，花园洋房环境，全屋臻装配置，即享拎包入住。",
+    "highlights": ["花园洋房", "全屋臻装", "拎包入住", "高品质社区"],
+    "image": "/images/facility-yixinyuan.webp"
+  },
+  {
+    "id": "jianbinlou",
+    "name": "健宾楼康养公寓",
+    "type": "apartment",
+    "tagline": "依山傍水·4 层活力公寓",
+    "summary": "自带健康基因，依山傍水，林深泉清。紧邻东进水库，天然湿地、森林氧吧、静谧桃园。共 4 层，标准间 73 间，套房 14 间。",
+    "highlights": ["4 层", "近百间活力公寓", "标准间 73", "套房 14"],
+    "image": "/images/facility-jianbinlou.webp"
+  },
+  {
+    "id": "wellness-club",
+    "name": "丰盛康乐配套",
+    "type": "wellness",
+    "tagline": "养生堂·足道·水疗盐蒸",
+    "summary": "健宾楼特设养生堂、足道馆、水疗盐蒸，可预约中医健康理疗；咖啡吧、台球厅、游泳馆、健身房、棋牌室、电影院应有尽有。",
+    "highlights": ["养生堂", "足道馆", "水疗盐蒸", "咖啡吧", "电影院"],
+    "image": "/images/facility-wellness.webp"
+  },
+  {
+    "id": "jiangnan-hospital",
+    "name": "江南医院",
+    "type": "medical",
+    "tagline": "16 亿·三级综合·JCI 标准",
+    "summary": "总投资 16 亿元，占地 100+ 亩，建筑面积约 8.3 万㎡，床位 600 张，三级综合 JCI 标准综合性医院，常州/金坛医保定点。",
+    "highlights": ["16 亿投资", "三级综合 + JCI", "600 床位", "100+ 亩", "8.3 万㎡"],
+    "image": "/images/facility-hospital.webp"
+  },
+  {
+    "id": "jiangnan-checkup",
+    "name": "江南医院体检中心",
+    "type": "checkup",
+    "tagline": "上海一院·金坛一院共建",
+    "summary": "上海市第一人民医院金坛第一人民医院健康管理中心江南医院分中心，提供更全面、个性化体检服务。",
+    "highlights": ["上海一院合作", "金坛一院合作", "个性化体检"],
+    "image": "/images/facility-checkup.webp"
+  },
+  {
+    "id": "sangyutang",
+    "name": "桑榆堂护理院",
+    "type": "nursing",
+    "tagline": "金坛唯一·医保定点",
+    "summary": "江南医院嵌入式护理院，金坛目前唯一一家护理院，医保定点。提供生活照料、医疗护理、康复促进、精神慰藉、临终关怀等服务。",
+    "highlights": ["金坛唯一", "医保定点", "临终关怀", "阿尔茨海默照护"],
+    "image": "/images/facility-nursing.webp"
+  },
+  {
+    "id": "qingge-academy",
+    "name": "卿舸书院",
+    "type": "academy",
+    "tagline": "2 万㎡·乐·学·为·序",
+    "summary": "共约 2 万平方米，6 大学娱区块：文教区 / 娱乐区 / 活动区 / 艺术区 / 运动区 / 会议中心。涵盖茶坊、泳池、书画、棋牌、影院、台球、羽毛球、乒乓、手工、练歌、舞蹈、宗教室。",
+    "highlights": ["2 万㎡", "6 大区块", "乐·学·为·序", "12+ 兴趣空间"],
+    "image": "/images/facility-academy.webp"
+  },
+  {
+    "id": "yushanfang",
+    "name": "玉膳房",
+    "type": "dining",
+    "tagline": "500 餐位·健康膳食体系",
+    "summary": "位于卿舸书院内，500 餐位、4 包厢 + 3 宴会厅。A/B/C 三种营养套餐，每周更换菜谱，可自选或单点。",
+    "highlights": ["500 餐位", "4 包厢", "3 宴会厅", "定制膳食"],
+    "image": "/images/facility-dining.webp"
+  },
+  {
+    "id": "wugu-farm",
+    "name": "吾谷农场",
+    "type": "farm",
+    "tagline": "耕耘收获·回归田园",
+    "summary": "茅山颐园为康养住户配套农场，耕耘收获四季，多样田野趣味体验，让心回归田园，静听万物静美。",
+    "highlights": ["四季耕耘", "田野趣味", "归园田居"],
+    "image": "/images/facility-farm.webp"
+  },
+  {
+    "id": "maoshan-street",
+    "name": "茅山商业水街",
+    "type": "commercial",
+    "tagline": "9300㎡·40 户·道文化特色街区",
+    "summary": "茅山道文化特色街区，约 9300 ㎡，可汇聚约 40 户商铺。度假区年游客 600 万人次，集游览、观光、餐饮、购物及民宿于一体。",
+    "highlights": ["9300㎡", "40 户商铺", "年游客 600 万", "道文化特色"],
+    "image": "/images/facility-street.webp"
+  }
+]

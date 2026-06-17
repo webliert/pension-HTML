@@ -4,7 +4,7 @@ import { siteConfig } from '@/lib/site-config'
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date()
   return [
-    '', '/about', '/services', '/facilities', '/gallery', '/contact', '/visit',
+    '', '/about', '/services', '/facilities', '/gallery', '/promotion', '/contact', '/visit',
   ].map((p) => ({
     url: `${siteConfig.url}${p}`,
     lastModified: now,
