@@ -22,9 +22,9 @@ export const siteConfig = {
 
   // === 联系（TODO: 部署前替换为真实信息）===
   url: 'https://maoshan-yiyuan.example.com',
-  phone: '0519-8266-XXXX',
-  phoneDisplay: '0519-8266-XXXX',
-  email: 'service@maoshan-yiyuan.com',
+  phone: '18658869354',
+  phoneDisplay: '18658869354',
+  email: '390156595@qq.com',
   address: '江苏省常州市金坛区国家 5A 级茅山旅游风景度假区',
   shortAddress: '常州金坛·茅山',
   workingHours: '周一至周日 9:00-18:00',
@@ -56,13 +56,13 @@ export const siteConfig = {
 
   // === 导航 ===
   nav: [
-    { href: '/',          label: '首页' },
-    { href: '/about',     label: '关于颐园' },
-    { href: '/services',  label: '康养服务' },
-    { href: '/facilities',label: '设施业态' },
-    { href: '/gallery',   label: '实景图集' },
+    { href: '/', label: '首页' },
+    { href: '/about', label: '关于颐园' },
+    { href: '/services', label: '康养服务' },
+    { href: '/facilities', label: '设施业态' },
+    { href: '/gallery', label: '实景图集' },
     { href: '/promotion', label: '体验活动' },
-    { href: '/contact',   label: '联系我们' },
+    { href: '/contact', label: '联系我们' },
   ],
 } as const
 
